@@ -29,7 +29,7 @@ public class SwaggerConfig {
     private ApiInfo metaData() {
         return new ApiInfoBuilder()
                 .title("Bills service")
-                .description("REST API for user service")
+                .description("REST API for bills service")
                 .version("1.0.1")
                 .license("Apache 2.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0")
