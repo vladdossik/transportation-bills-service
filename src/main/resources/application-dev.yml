@@ -1,0 +1,34 @@
+logging:
+  level:
+    root: INFO
+    transportation: DEBUG
+
+server:
+  port: 8083
+
+services:
+#  if you need to go to another services
+
+spring:
+  datasource:
+    url: ${POSTGRES_URL:jdbc:postgresql://localhost:5432/postgres?currentSchema=transportation_bills_service_db}
+    hikari:
+      username: ${POSTGRES_USER:postgres}
+      password: ${POSTGRES_PASSWORD:123}
+  liquibase:
+    enabled: true
+    user: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:123}
+    default-schema: ${POSTGRES_SCHEMA:transportation_bills_service_db}
+    liquibase-schema: ${POSTGRES_SCHEMA:transportation_bills_service_db}
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect
+        show_sql: false
+        format_sql: false
+        use_sql_comments: false
+    hibernate:
+      ddl-auto: none
+    generate-ddl: true

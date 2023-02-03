@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/2023.1.0/01_create_bills_table.yaml
+  - include:
+      file: db/changelog/2023.1.1/01_rename_column_payment_date.yaml
+  - include:
+      file: db/changelog/2023.1.2/01_add_external_id.yaml
