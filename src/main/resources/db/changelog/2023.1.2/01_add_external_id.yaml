@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023.1.2_01
+      author: lissa.faul@mail.ru
+      changes:
+        - addColumn:
+            tableName: bills
+            columns:
+              - column:
+                  name: external_id
+                  type: uuid
+                  remarks: external id
+                  defaultValue: gen_random_uuid()
+                  constraints:
+                    nullable: false

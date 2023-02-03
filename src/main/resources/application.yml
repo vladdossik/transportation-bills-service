@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: transportation-bills-service
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  liquibase:
+    enabled: true
+
+springdoc:
+  swagger-ui:
+    doc-expansion: none
+    default-model-rendering: model
+
+management:
+  server:
+    port: 8084
+  endpoints:
+    enabled-by-default: true
+    web.exposure.include: '*'
+  endpoint:
+    info.enabled: true
+    health:
+      enabled: true
+      show-details: always
+    loggers.enabled: true

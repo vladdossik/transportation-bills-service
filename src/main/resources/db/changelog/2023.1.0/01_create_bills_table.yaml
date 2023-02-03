@@ -1,0 +1,54 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023.1.0_01
+      author: lissa.faul@mail.ru
+      changes:
+        - createTable:
+            tableName: bills
+            columns:
+              - column:
+                  name: id
+                  type: serial
+                  remarks: id
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: uuid
+                  remarks: user id
+                  constraints:
+                    nullable: false
+              - column:
+                  name: amount
+                  type: DOUBLE
+                  remarks: сумма платежа
+              - column:
+                  name: payment_Date
+                  type: varchar(100)
+                  remarks: дата до оплаты заказа
+                  constraints:
+                    nullable: false
+              - column:
+                  name: was_paid
+                  type: BOOLEAN
+                  remarks: статус оплаты заказа
+                  constraints:
+                    nullable: false
+              - column:
+                  name: creation_date
+                  type: TIMESTAMP
+                  remarks: дата создания
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_update_date
+                  type: TIMESTAMP
+                  remarks: дата обновления
+                  constraints:
+                    nullable: false
+              - column:
+                  name: delete_date
+                  type: TIMESTAMP
+                  remarks: дата удаления
+
