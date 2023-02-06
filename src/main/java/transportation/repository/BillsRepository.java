@@ -11,7 +11,6 @@ import transportation.model.Bills;
 
 import javax.transaction.Transactional;
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -41,4 +40,6 @@ public interface BillsRepository extends JpaRepository<Bills, Long> {
     @Transactional
     @Query("update Bills b set b.deleteDate = CURRENT_TIMESTAMP")
     void deleteAll();
+
+    void delete();
 }

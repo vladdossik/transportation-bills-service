@@ -4,7 +4,6 @@ import bill.BillPageResponse;
 import bill.BillPostDto;
 import bill.BillPutDto;
 import bill.BillResponseDto;
-import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -18,7 +17,6 @@ import transportation.repository.BillsRepository;
 import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
